@@ -1,6 +1,7 @@
 package com.mycompany.inventery_service.service;
 
-import com.mycompany.inventery_service.model.Book;
+import com.mycompany.inventery_service.dto.BookDto;
+import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.repository.BookRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,20 @@ public class BookServiceImpl implements BookService {
             }
         }
         return "Added books successfully.";
+    }
+
+    @Override
+    public List<BookDto> getBooks() {
+        return bookRepository.findAll().stream().map(book -> {
+            BookDto bookDto = new BookDto();
+            bookDto.setName(book.getName());
+            bookDto.setAuthor(book.getAuthor());
+            bookDto.setPrice(book.getPrice());
+            bookDto.setStock(book.getStock());
+            bookDto.setDescription(book.getDescription());
+            bookDto.setPublisherName(book.getPublisherName());
+            return bookDto;
+        }).toList();
     }
 
     private boolean validateBook(Book book) {

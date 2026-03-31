@@ -1,4 +1,4 @@
-package com.mycompany.inventery_service.model;
+package com.mycompany.inventery_service.entity;
 
 import jakarta.persistence.*;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -27,6 +27,11 @@ public class Book {
     
     @Schema(description = "Detailed description of the book", example = "A classic American novel", maxLength = 1000)
     private String description;
+
+    private String isbn;
+
+    @Column(name = "publisher_name")
+    private String publisherName;
 
     public Book() {
     }
@@ -77,5 +82,21 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getPublisherName() {
+        return publisherName;
+    }
+
+    public void setPublisherName(String publisherName) {
+        this.publisherName = publisherName;
     }
 }
