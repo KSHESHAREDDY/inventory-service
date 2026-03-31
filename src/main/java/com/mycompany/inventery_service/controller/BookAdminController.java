@@ -1,6 +1,7 @@
 package com.mycompany.inventery_service.controller;
 
-import com.mycompany.inventery_service.model.Book;
+import com.mycompany.inventery_service.dto.BookDto;
+import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.service.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = {"/api/admin", "/api/v1/admin"}, name = "Book Admin Controller", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+@RequestMapping(path = {"/api/admin"}, name = "Book Admin Controller", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 @Tag(name = "Book Admin Controller", 
      description = "APIs for managing the bookstore inventory. Provides endpoints for adding, updating, and checking the status of books in the system.")
 public class BookAdminController {
@@ -142,5 +143,10 @@ public class BookAdminController {
     public String updateBook() {
         // Placeholder for updating a book in the inventory
         return "Update Book API - To be implemented";
+    }
+
+    @GetMapping("/books")
+    public List<BookDto> getBooks() {
+        return bookService.getBooks();
     }
 }
