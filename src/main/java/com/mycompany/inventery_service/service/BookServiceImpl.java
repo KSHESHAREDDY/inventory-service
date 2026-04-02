@@ -1,5 +1,7 @@
 package com.mycompany.inventery_service.service;
 
+import com.mycompany.inventery_service.constants.MessageConstants;
+import com.mycompany.inventery_service.dto.ApiResponse;
 import com.mycompany.inventery_service.dto.BookDto;
 import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.repository.BookRepository;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -15,33 +18,80 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookRepository bookRepository;
 
-    public BookServiceImpl(){}
-
-    public String addBook(Book book) {
-        if(validateBook(book)) {
-            bookRepository.save(book);
-            return "Add Book API - To be implemented";
+    public ApiResponse addBook(BookDto bookDto) {
+        ApiResponse response = new ApiResponse();
+        if(validateBook(bookDto)) {
+            this.constructBookAndSave(bookDto);
+            response.setMessage(MessageConstants.BOOK_ADDED_SUCCESSFULLY);
+            response.setStatusCode(200L);
         } else {
-            return "Book name and author are required fields.";
+            response.setMessage(MessageConstants.BOOK_AND_AUTHOR_REQUIRED);
+            response.setStatusCode(800L);
         }
+        return response;
     }
 
-    public String addMultipleBooks(List<Book> books) {
-        for(Book book : books) {
-            if(validateBook(book)) {
-                bookRepository.save(book);
+    public ApiResponse addMultipleBooks(List<BookDto> books) {
+        ApiResponse response = new ApiResponse();
+        for(BookDto bookDto : books) {
+            if(validateBook(bookDto)) {
+                this.constructBookAndSave(bookDto);
             } else {
-                return "Book name and author are required fields.";
+                response.setMessage(MessageConstants.BOOK_AND_AUTHOR_REQUIRED);
+                response.setStatusCode(800L);
+                return response;
             }
         }
-        return "Added books successfully.";
+        response.setMessage(MessageConstants.BOOKS_ADDED_SUCCESSFULLY);
+        response.setStatusCode(200L);
+        return response;
     }
 
     @Override
-    public List<BookDto> getBooks() {
-        return bookRepository.findAll().stream().map(book -> {
+    public ApiResponse getBooks() {
+        ApiResponse response = new ApiResponse();
+        List<BookDto> booksDto = convertBooksToBookDtos(bookRepository.findAll());
+        response.setBooks(booksDto);
+        response.setStatusCode(200L);
+        response.setMessage(MessageConstants.BOOKS_RETRIEVED_SUCCESSFULLY);
+        return response;
+    }
+
+    @Override
+    public ApiResponse searchBooks(BookDto bookDto) {
+        List<Book> books = bookRepository.findAll();
+        Predicate<Book> nameFilter = (Book book) -> book.getName().toUpperCase().contains(bookDto.getName().toUpperCase());
+        Predicate<Book> priceFilter = (Book book) -> book.getPrice() > bookDto.getPrice();
+        ApiResponse response = new ApiResponse();
+        List<BookDto> booksDto = convertBooksToBookDtos(books.stream()
+                .filter(nameFilter)
+                .filter(priceFilter)
+                .toList());
+        response.setBooks(booksDto);
+        response.setStatusCode(200L);
+        response.setMessage(MessageConstants.BOOKS_RETRIEVED_SUCCESSFULLY);
+        return response;
+    }
+
+    private boolean validateBook(BookDto bookDto) {
+        return StringUtils.isNotBlank(bookDto.getName()) && StringUtils.isNotBlank(bookDto.getAuthor());
+    }
+
+    private void constructBookAndSave(BookDto bookDto) {
+        Book book = new Book();
+        book.setName(bookDto.getName());
+        book.setAuthor(bookDto.getAuthor());
+        book.setPrice(bookDto.getPrice());
+        book.setStock(bookDto.getStock());
+        book.setDescription(bookDto.getDescription());
+        book.setPublisherName(bookDto.getPublisherName());
+        bookRepository.save(book);
+    }
+
+    private List<BookDto> convertBooksToBookDtos(List<Book> books) {
+        return books.stream().map(book -> {
             BookDto bookDto = new BookDto();
-            bookDto.setName(book.getName());
+            bookDto.setName(book.getName().toUpperCase());
             bookDto.setAuthor(book.getAuthor());
             bookDto.setPrice(book.getPrice());
             bookDto.setStock(book.getStock());
@@ -51,7 +101,4 @@ public class BookServiceImpl implements BookService {
         }).toList();
     }
 
-    private boolean validateBook(Book book) {
-        return StringUtils.isNotBlank(book.getName()) && StringUtils.isNotBlank(book.getAuthor());
-    }
 }
