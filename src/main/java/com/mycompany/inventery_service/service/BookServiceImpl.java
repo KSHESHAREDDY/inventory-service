@@ -2,11 +2,15 @@ package com.mycompany.inventery_service.service;
 
 import com.mycompany.inventery_service.constants.MessageConstants;
 import com.mycompany.inventery_service.dto.ApiResponse;
+import com.mycompany.inventery_service.dto.BookAdminRequestDto;
 import com.mycompany.inventery_service.dto.BookDto;
 import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.repository.BookRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -48,9 +52,19 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public ApiResponse getBooks() {
+    public ApiResponse getBooks(BookAdminRequestDto bookAdminRequestDto) {
+//        Sort Object;
+        Sort sort = bookAdminRequestDto.getSortDir().equalsIgnoreCase("asc")
+                ? Sort.by(bookAdminRequestDto.getSortBy()).ascending()
+                : Sort.by(bookAdminRequestDto.getSortBy()).descending();
+
+//        Pageable Object
+        Pageable pageable = PageRequest.of(bookAdminRequestDto.getPage(), bookAdminRequestDto.getSize(), sort);
+
+        List<BookDto> booksDto = convertBooksToBookDtos(bookRepository.findAll(pageable)
+                .stream()
+                .toList());
         ApiResponse response = new ApiResponse();
-        List<BookDto> booksDto = convertBooksToBookDtos(bookRepository.findAll());
         response.setBooks(booksDto);
         response.setStatusCode(200L);
         response.setMessage(MessageConstants.BOOKS_RETRIEVED_SUCCESSFULLY);
