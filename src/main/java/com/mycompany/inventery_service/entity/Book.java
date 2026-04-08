@@ -5,9 +5,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,8 +23,10 @@ public class Book {
     private Long id;
     
     private String name;
-    
-    private String author;
+
+    @OneToOne
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    private Author author;
     
     private double price;
     
@@ -39,7 +42,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String name, String author, double price, int stock, String description) {
+    public Book(String name, Author author, double price, int stock, String description) {
         this.name = name;
         this.author = author;
         this.price = price;

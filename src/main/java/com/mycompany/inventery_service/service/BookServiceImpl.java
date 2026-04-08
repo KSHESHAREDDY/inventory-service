@@ -4,6 +4,7 @@ import com.mycompany.inventery_service.constants.MessageConstants;
 import com.mycompany.inventery_service.dto.ApiResponse;
 import com.mycompany.inventery_service.dto.BookAdminRequestDto;
 import com.mycompany.inventery_service.dto.BookDto;
+import com.mycompany.inventery_service.entity.Author;
 import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.repository.BookRepository;
 import org.apache.commons.lang3.StringUtils;
@@ -116,17 +117,20 @@ public class BookServiceImpl implements BookService {
     }
 
     private boolean validateBook(BookDto bookDto) {
-        return StringUtils.isNotBlank(bookDto.getName()) && StringUtils.isNotBlank(bookDto.getAuthor());
+        return StringUtils.isNotBlank(bookDto.getName()) && (bookDto.getAuthorId() != null && bookDto.getAuthorId() > 0);
     }
 
     private void constructBookAndSave(BookDto bookDto) {
         Book book = new Book();
         book.setName(bookDto.getName());
-        book.setAuthor(bookDto.getAuthor());
         book.setPrice(bookDto.getPrice());
         book.setStock(bookDto.getStock());
         book.setDescription(bookDto.getDescription());
         book.setPublisherName(bookDto.getPublisherName());
+        //Construct Author and set to book
+        Author author = new Author();
+        author.setId(bookDto.getAuthorId());
+        book.setAuthor(author);
         bookRepository.save(book);
     }
 
@@ -134,7 +138,7 @@ public class BookServiceImpl implements BookService {
         return books.stream().map(book -> {
             BookDto bookDto = new BookDto();
             bookDto.setName(book.getName().toUpperCase());
-            bookDto.setAuthor(book.getAuthor());
+            bookDto.setAuthorId(book.getAuthor().getId());
             bookDto.setPrice(book.getPrice());
             bookDto.setStock(book.getStock());
             bookDto.setDescription(book.getDescription());
