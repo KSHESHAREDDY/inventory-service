@@ -87,6 +87,34 @@ public class BookServiceImpl implements BookService {
         return response;
     }
 
+    @Override
+    public ApiResponse getBooksByAuthor(String author) {
+        ApiResponse response = new ApiResponse();
+
+        // TC-07, TC-08, TC-09: Validate null / blank / spaces-only author name
+        if (StringUtils.isBlank(author)) {
+            response.setStatusCode(800L);
+            response.setMessage(MessageConstants.AUTHOR_NAME_REQUIRED);
+            return response;
+        }
+
+        // TC-01, TC-02, TC-03, TC-04, TC-05: Search by partial/full author name (case-insensitive, trimmed)
+        List<Book> books = bookRepository.findByAuthorContainingIgnoreCase(author.trim());
+
+        // TC-06: No books found for author
+        if (books.isEmpty()) {
+            response.setStatusCode(200L);
+            response.setMessage(MessageConstants.NO_BOOKS_FOUND_FOR_AUTHOR);
+            response.setBooks(java.util.Collections.emptyList());
+            return response;
+        }
+
+        response.setBooks(convertBooksToBookDtos(books));
+        response.setStatusCode(200L);
+        response.setMessage(MessageConstants.BOOKS_RETRIEVED_SUCCESSFULLY);
+        return response;
+    }
+
     private boolean validateBook(BookDto bookDto) {
         return StringUtils.isNotBlank(bookDto.getName()) && StringUtils.isNotBlank(bookDto.getAuthor());
     }

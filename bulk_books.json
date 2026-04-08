@@ -1,0 +1,804 @@
+﻿{
+    "booksDto":  [
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 1",
+                         "description":  "A comprehensive guide on Programming - Volume 1",
+                         "price":  513.99,
+                         "stock":  51,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 2",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 2",
+                         "price":  914.99,
+                         "stock":  87,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 3",
+                         "description":  "A comprehensive guide on Algorithms - Volume 3",
+                         "price":  832.99,
+                         "stock":  99,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 4",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 4",
+                         "price":  783.99,
+                         "stock":  181,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 5",
+                         "description":  "A comprehensive guide on Java - Volume 5",
+                         "price":  644.99,
+                         "stock":  114,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 6",
+                         "description":  "A comprehensive guide on Python - Volume 6",
+                         "price":  806.99,
+                         "stock":  72,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 7",
+                         "description":  "A comprehensive guide on DevOps - Volume 7",
+                         "price":  222.99,
+                         "stock":  23,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 8",
+                         "description":  "A comprehensive guide on Microservices - Volume 8",
+                         "price":  683.99,
+                         "stock":  146,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 9",
+                         "description":  "A comprehensive guide on Clean Code - Volume 9",
+                         "price":  423.99,
+                         "stock":  97,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 10",
+                         "description":  "A comprehensive guide on Data Structures - Volume 10",
+                         "price":  843.99,
+                         "stock":  67,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 11",
+                         "description":  "A comprehensive guide on Programming - Volume 11",
+                         "price":  301.99,
+                         "stock":  47,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 12",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 12",
+                         "price":  636.99,
+                         "stock":  10,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 13",
+                         "description":  "A comprehensive guide on Algorithms - Volume 13",
+                         "price":  377.99,
+                         "stock":  108,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 14",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 14",
+                         "price":  234.99,
+                         "stock":  164,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 15",
+                         "description":  "A comprehensive guide on Java - Volume 15",
+                         "price":  530.99,
+                         "stock":  94,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 16",
+                         "description":  "A comprehensive guide on Python - Volume 16",
+                         "price":  929.99,
+                         "stock":  189,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 17",
+                         "description":  "A comprehensive guide on DevOps - Volume 17",
+                         "price":  418.99,
+                         "stock":  18,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 18",
+                         "description":  "A comprehensive guide on Microservices - Volume 18",
+                         "price":  779.99,
+                         "stock":  170,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 19",
+                         "description":  "A comprehensive guide on Clean Code - Volume 19",
+                         "price":  468.99,
+                         "stock":  110,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 20",
+                         "description":  "A comprehensive guide on Data Structures - Volume 20",
+                         "price":  312.99,
+                         "stock":  99,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 21",
+                         "description":  "A comprehensive guide on Programming - Volume 21",
+                         "price":  510.99,
+                         "stock":  82,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 22",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 22",
+                         "price":  581.99,
+                         "stock":  58,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 23",
+                         "description":  "A comprehensive guide on Algorithms - Volume 23",
+                         "price":  666.99,
+                         "stock":  20,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 24",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 24",
+                         "price":  386.99,
+                         "stock":  64,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 25",
+                         "description":  "A comprehensive guide on Java - Volume 25",
+                         "price":  739.99,
+                         "stock":  168,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 26",
+                         "description":  "A comprehensive guide on Python - Volume 26",
+                         "price":  891.99,
+                         "stock":  61,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 27",
+                         "description":  "A comprehensive guide on DevOps - Volume 27",
+                         "price":  618.99,
+                         "stock":  132,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 28",
+                         "description":  "A comprehensive guide on Microservices - Volume 28",
+                         "price":  777.99,
+                         "stock":  144,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 29",
+                         "description":  "A comprehensive guide on Clean Code - Volume 29",
+                         "price":  299.99,
+                         "stock":  99,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 30",
+                         "description":  "A comprehensive guide on Data Structures - Volume 30",
+                         "price":  207.99,
+                         "stock":  188,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 31",
+                         "description":  "A comprehensive guide on Programming - Volume 31",
+                         "price":  680.99,
+                         "stock":  199,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 32",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 32",
+                         "price":  648.99,
+                         "stock":  23,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 33",
+                         "description":  "A comprehensive guide on Algorithms - Volume 33",
+                         "price":  371.99,
+                         "stock":  112,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 34",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 34",
+                         "price":  912.99,
+                         "stock":  110,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 35",
+                         "description":  "A comprehensive guide on Java - Volume 35",
+                         "price":  583.99,
+                         "stock":  181,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 36",
+                         "description":  "A comprehensive guide on Python - Volume 36",
+                         "price":  956.99,
+                         "stock":  81,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 37",
+                         "description":  "A comprehensive guide on DevOps - Volume 37",
+                         "price":  385.99,
+                         "stock":  116,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 38",
+                         "description":  "A comprehensive guide on Microservices - Volume 38",
+                         "price":  615.99,
+                         "stock":  150,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 39",
+                         "description":  "A comprehensive guide on Clean Code - Volume 39",
+                         "price":  376.99,
+                         "stock":  54,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 40",
+                         "description":  "A comprehensive guide on Data Structures - Volume 40",
+                         "price":  214.99,
+                         "stock":  103,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 41",
+                         "description":  "A comprehensive guide on Programming - Volume 41",
+                         "price":  343.99,
+                         "stock":  58,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 42",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 42",
+                         "price":  744.99,
+                         "stock":  150,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 43",
+                         "description":  "A comprehensive guide on Algorithms - Volume 43",
+                         "price":  913.99,
+                         "stock":  16,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 44",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 44",
+                         "price":  939.99,
+                         "stock":  148,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 45",
+                         "description":  "A comprehensive guide on Java - Volume 45",
+                         "price":  466.99,
+                         "stock":  51,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 46",
+                         "description":  "A comprehensive guide on Python - Volume 46",
+                         "price":  939.99,
+                         "stock":  32,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 47",
+                         "description":  "A comprehensive guide on DevOps - Volume 47",
+                         "price":  519.99,
+                         "stock":  32,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 48",
+                         "description":  "A comprehensive guide on Microservices - Volume 48",
+                         "price":  364.99,
+                         "stock":  129,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 49",
+                         "description":  "A comprehensive guide on Clean Code - Volume 49",
+                         "price":  256.99,
+                         "stock":  142,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 50",
+                         "description":  "A comprehensive guide on Data Structures - Volume 50",
+                         "price":  326.99,
+                         "stock":  193,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 51",
+                         "description":  "A comprehensive guide on Programming - Volume 51",
+                         "price":  226.99,
+                         "stock":  155,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 52",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 52",
+                         "price":  779.99,
+                         "stock":  185,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 53",
+                         "description":  "A comprehensive guide on Algorithms - Volume 53",
+                         "price":  978.99,
+                         "stock":  105,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 54",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 54",
+                         "price":  986.99,
+                         "stock":  56,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 55",
+                         "description":  "A comprehensive guide on Java - Volume 55",
+                         "price":  220.99,
+                         "stock":  85,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 56",
+                         "description":  "A comprehensive guide on Python - Volume 56",
+                         "price":  592.99,
+                         "stock":  28,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 57",
+                         "description":  "A comprehensive guide on DevOps - Volume 57",
+                         "price":  243.99,
+                         "stock":  188,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 58",
+                         "description":  "A comprehensive guide on Microservices - Volume 58",
+                         "price":  714.99,
+                         "stock":  48,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 59",
+                         "description":  "A comprehensive guide on Clean Code - Volume 59",
+                         "price":  699.99,
+                         "stock":  160,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 60",
+                         "description":  "A comprehensive guide on Data Structures - Volume 60",
+                         "price":  375.99,
+                         "stock":  105,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 61",
+                         "description":  "A comprehensive guide on Programming - Volume 61",
+                         "price":  286.99,
+                         "stock":  193,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 62",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 62",
+                         "price":  431.99,
+                         "stock":  24,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 63",
+                         "description":  "A comprehensive guide on Algorithms - Volume 63",
+                         "price":  700.99,
+                         "stock":  180,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 64",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 64",
+                         "price":  281.99,
+                         "stock":  138,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 65",
+                         "description":  "A comprehensive guide on Java - Volume 65",
+                         "price":  689.99,
+                         "stock":  23,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 66",
+                         "description":  "A comprehensive guide on Python - Volume 66",
+                         "price":  517.99,
+                         "stock":  68,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 67",
+                         "description":  "A comprehensive guide on DevOps - Volume 67",
+                         "price":  424.99,
+                         "stock":  87,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 68",
+                         "description":  "A comprehensive guide on Microservices - Volume 68",
+                         "price":  454.99,
+                         "stock":  59,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 69",
+                         "description":  "A comprehensive guide on Clean Code - Volume 69",
+                         "price":  956.99,
+                         "stock":  139,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 70",
+                         "description":  "A comprehensive guide on Data Structures - Volume 70",
+                         "price":  499.99,
+                         "stock":  38,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 71",
+                         "description":  "A comprehensive guide on Programming - Volume 71",
+                         "price":  402.99,
+                         "stock":  96,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 72",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 72",
+                         "price":  593.99,
+                         "stock":  125,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 73",
+                         "description":  "A comprehensive guide on Algorithms - Volume 73",
+                         "price":  977.99,
+                         "stock":  48,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 74",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 74",
+                         "price":  561.99,
+                         "stock":  75,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 75",
+                         "description":  "A comprehensive guide on Java - Volume 75",
+                         "price":  208.99,
+                         "stock":  184,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 76",
+                         "description":  "A comprehensive guide on Python - Volume 76",
+                         "price":  705.99,
+                         "stock":  176,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 77",
+                         "description":  "A comprehensive guide on DevOps - Volume 77",
+                         "price":  929.99,
+                         "stock":  91,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 78",
+                         "description":  "A comprehensive guide on Microservices - Volume 78",
+                         "price":  234.99,
+                         "stock":  107,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 79",
+                         "description":  "A comprehensive guide on Clean Code - Volume 79",
+                         "price":  267.99,
+                         "stock":  79,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 80",
+                         "description":  "A comprehensive guide on Data Structures - Volume 80",
+                         "price":  777.99,
+                         "stock":  122,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 81",
+                         "description":  "A comprehensive guide on Programming - Volume 81",
+                         "price":  703.99,
+                         "stock":  75,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 82",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 82",
+                         "price":  678.99,
+                         "stock":  24,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 83",
+                         "description":  "A comprehensive guide on Algorithms - Volume 83",
+                         "price":  636.99,
+                         "stock":  145,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 84",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 84",
+                         "price":  470.99,
+                         "stock":  61,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 85",
+                         "description":  "A comprehensive guide on Java - Volume 85",
+                         "price":  863.99,
+                         "stock":  33,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 86",
+                         "description":  "A comprehensive guide on Python - Volume 86",
+                         "price":  208.99,
+                         "stock":  69,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 87",
+                         "description":  "A comprehensive guide on DevOps - Volume 87",
+                         "price":  499.99,
+                         "stock":  151,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 88",
+                         "description":  "A comprehensive guide on Microservices - Volume 88",
+                         "price":  738.99,
+                         "stock":  180,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 89",
+                         "description":  "A comprehensive guide on Clean Code - Volume 89",
+                         "price":  586.99,
+                         "stock":  22,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 90",
+                         "description":  "A comprehensive guide on Data Structures - Volume 90",
+                         "price":  212.99,
+                         "stock":  110,
+                         "publisherName":  "Cambridge"
+                     },
+                     {
+                         "author":  "Robert C. Martin",
+                         "name":  "Programming Book 91",
+                         "description":  "A comprehensive guide on Programming - Volume 91",
+                         "price":  615.99,
+                         "stock":  115,
+                         "publisherName":  "Prentice Hall"
+                     },
+                     {
+                         "author":  "Martin Fowler",
+                         "name":  "Design Patterns Book 92",
+                         "description":  "A comprehensive guide on Design Patterns - Volume 92",
+                         "price":  628.99,
+                         "stock":  51,
+                         "publisherName":  "O\u0027Reilly"
+                     },
+                     {
+                         "author":  "Joshua Bloch",
+                         "name":  "Algorithms Book 93",
+                         "description":  "A comprehensive guide on Algorithms - Volume 93",
+                         "price":  403.99,
+                         "stock":  180,
+                         "publisherName":  "Addison-Wesley"
+                     },
+                     {
+                         "author":  "Eric Evans",
+                         "name":  "Spring Boot Book 94",
+                         "description":  "A comprehensive guide on Spring Boot - Volume 94",
+                         "price":  323.99,
+                         "stock":  131,
+                         "publisherName":  "Manning"
+                     },
+                     {
+                         "author":  "Kent Beck",
+                         "name":  "Java Book 95",
+                         "description":  "A comprehensive guide on Java - Volume 95",
+                         "price":  248.99,
+                         "stock":  96,
+                         "publisherName":  "Packt"
+                     },
+                     {
+                         "author":  "Gang of Four",
+                         "name":  "Python Book 96",
+                         "description":  "A comprehensive guide on Python - Volume 96",
+                         "price":  646.99,
+                         "stock":  119,
+                         "publisherName":  "Apress"
+                     },
+                     {
+                         "author":  "Andrew Hunt",
+                         "name":  "DevOps Book 97",
+                         "description":  "A comprehensive guide on DevOps - Volume 97",
+                         "price":  669.99,
+                         "stock":  105,
+                         "publisherName":  "Wiley"
+                     },
+                     {
+                         "author":  "Donald Knuth",
+                         "name":  "Microservices Book 98",
+                         "description":  "A comprehensive guide on Microservices - Volume 98",
+                         "price":  584.99,
+                         "stock":  101,
+                         "publisherName":  "McGraw-Hill"
+                     },
+                     {
+                         "author":  "Bjarne Stroustrup",
+                         "name":  "Clean Code Book 99",
+                         "description":  "A comprehensive guide on Clean Code - Volume 99",
+                         "price":  885.99,
+                         "stock":  194,
+                         "publisherName":  "MIT Press"
+                     },
+                     {
+                         "author":  "James Gosling",
+                         "name":  "Data Structures Book 100",
+                         "description":  "A comprehensive guide on Data Structures - Volume 100",
+                         "price":  611.99,
+                         "stock":  49,
+                         "publisherName":  "Cambridge"
+                     }
+                 ]
+}

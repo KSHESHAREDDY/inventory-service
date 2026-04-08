@@ -14,4 +14,5 @@ public interface BookRepository extends JpaRepository<Book, Long>, CrudRepositor
     public Page<Book> findAll(Pageable pageable);
     public List<Book> findByNameContaining(String name);
     List<Book> findByNameContainingAndPriceGreaterThanAndPriceLessThan(String query, Long priceFrom, Long priceTo);
+    List<Book> findByAuthorContainingIgnoreCase(String author);
 }

@@ -11,4 +11,5 @@ public interface BookService {
     public ApiResponse addMultipleBooks(List<BookDto> books);
     public ApiResponse getBooks(BookAdminRequestDto bookAdminRequestDto);
     public ApiResponse searchBooks(BookDto bookDto);
+    public ApiResponse getBooksByAuthor(String author);
 }
