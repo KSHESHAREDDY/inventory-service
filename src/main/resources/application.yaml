@@ -5,9 +5,9 @@ spring:
   application:
     name: inventery-service
   datasource:
-    url: jdbc:mysql://localhost:3306/myCompanyDb?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/myCompanyDb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: 4784
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
