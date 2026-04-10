@@ -1,4 +1,4 @@
-package com.mycompany.inventery_service.service;
+package com.mycompany.inventery_service.service.impl;
 
 import com.mycompany.inventery_service.constants.MessageConstants;
 import com.mycompany.inventery_service.dto.ApiResponse;
@@ -7,6 +7,7 @@ import com.mycompany.inventery_service.dto.BookDto;
 import com.mycompany.inventery_service.entity.Author;
 import com.mycompany.inventery_service.entity.Book;
 import com.mycompany.inventery_service.repository.BookRepository;
+import com.mycompany.inventery_service.service.BookService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

@@ -10,4 +10,5 @@ public class ApiResponse {
     private Long statusCode;
     private String message;
     private List<BookDto> books;
+    private List<AuthorDto> authors;
 }
