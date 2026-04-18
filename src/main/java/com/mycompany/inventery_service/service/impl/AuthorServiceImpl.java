@@ -43,4 +43,24 @@ public class AuthorServiceImpl implements AuthorService {
         authorDto.setName(author.getName());
         return authorDto;
     }
+
+    public ApiResponse addAuthor(AuthorDto authorDto){
+        if(authorDto.getName()== null){
+            ApiResponse apiResponse =new ApiResponse();
+            apiResponse.setStatusCode(500L);
+            apiResponse.setMessage("Name required.");
+            return apiResponse;
+        }
+        Author author = new Author();
+        author.setName(authorDto.getName());
+        Author savedAuthor = authorRepository.save(author);
+        ApiResponse apiResponse = new ApiResponse();
+        AuthorDto savedAuthorDto = new AuthorDto();
+        savedAuthorDto.setId(savedAuthor.getId());
+        savedAuthorDto.setName(savedAuthor.getName());
+        apiResponse.setAuthors(List.of(savedAuthorDto));
+        apiResponse.setStatusCode(200L);
+        apiResponse.setMessage("Author details updated.");
+        return apiResponse;
+    }
 }
