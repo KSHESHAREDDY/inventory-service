@@ -20,20 +20,26 @@ import lombok.Setter;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
-    
+
+    @Column
     private String name;
 
     @OneToOne
     @JoinColumn(name = "author_id", referencedColumnName = "id")
     private Author author;
-    
+
+    @Column
     private double price;
-    
+
+    @Column
     private int stock;
-    
+
+    @Column
     private String description;
 
+    @Column
     private String isbn;
 
     @Column(name = "publisher_name")
