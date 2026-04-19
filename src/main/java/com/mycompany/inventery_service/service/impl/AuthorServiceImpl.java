@@ -44,23 +44,45 @@ public class AuthorServiceImpl implements AuthorService {
         return authorDto;
     }
 
-    public ApiResponse addAuthor(AuthorDto authorDto){
-        if(authorDto.getName()== null){
-            ApiResponse apiResponse =new ApiResponse();
+    public ApiResponse addAuthor(AuthorDto authorDto) {
+        ApiResponse apiResponse = new ApiResponse();
+        if(!validateAuthorDto(authorDto)){
             apiResponse.setStatusCode(500L);
-            apiResponse.setMessage("Name required.");
+            apiResponse.setMessage("Invalid Name");
             return apiResponse;
         }
+
+        Author existingAuthor = authorRepository.findByName(authorDto.getName());
+        if(existingAuthor != null) {
+            apiResponse.setStatusCode(500L);
+            apiResponse.setMessage("Author with the same name already exists.");
+            return apiResponse;
+        }
+
+
         Author author = new Author();
         author.setName(authorDto.getName());
         Author savedAuthor = authorRepository.save(author);
-        ApiResponse apiResponse = new ApiResponse();
-        AuthorDto savedAuthorDto = new AuthorDto();
-        savedAuthorDto.setId(savedAuthor.getId());
-        savedAuthorDto.setName(savedAuthor.getName());
-        apiResponse.setAuthors(List.of(savedAuthorDto));
+
+
+        authorDto.setId(savedAuthor.getId());
+
+        apiResponse.setAuthors(List.of(authorDto));
         apiResponse.setStatusCode(200L);
         apiResponse.setMessage("Author details updated.");
+
         return apiResponse;
     }
+
+    boolean validateAuthorDto(AuthorDto authorDto) {
+        if(authorDto == null) {
+            return false;
+        } else if (StringUtils.isBlank(authorDto.getName())) {
+            return false;
+        } else if(authorDto.getName().length() > 100) {
+            return false;
+        }
+        return true;
+    }
+
 }
