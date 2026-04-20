@@ -24,4 +24,9 @@ public class AuthorController {
         return authorService.addAuthor(authorDto);
     }
 
+    @GetMapping(value = "/author/{id}")
+    public ApiResponse getAuthorById(@PathVariable Long id) {
+        return authorService.findBookByAuthor(id);
+    }
+
 }

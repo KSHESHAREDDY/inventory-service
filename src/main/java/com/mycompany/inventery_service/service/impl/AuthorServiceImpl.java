@@ -1,5 +1,6 @@
 package com.mycompany.inventery_service.service.impl;
 
+import com.mycompany.inventery_service.dao.BookDao;
 import com.mycompany.inventery_service.dto.ApiResponse;
 import com.mycompany.inventery_service.dto.AuthorDto;
 import com.mycompany.inventery_service.entity.Author;
@@ -15,6 +16,9 @@ import java.util.List;
 public class AuthorServiceImpl implements AuthorService {
     @Autowired
     AuthorRepository authorRepository;
+
+    @Autowired
+    BookDao bookDao;
 
     @Override
     public ApiResponse searchAuthor(String name) {
@@ -72,6 +76,29 @@ public class AuthorServiceImpl implements AuthorService {
         apiResponse.setMessage("Author details updated.");
 
         return apiResponse;
+    }
+
+    @Override
+    public ApiResponse findBookByAuthor(Long id) {
+       ApiResponse apiResponse = new ApiResponse();
+         if(id == null) {
+              apiResponse.setStatusCode(500L);
+              apiResponse.setMessage("Author ID is required");
+              return apiResponse;
+         }
+
+         bookDao.findBookWithAuthor(id).ifPresentOrElse(
+                 bookDto -> {
+                     apiResponse.setBooks(List.of(bookDto));
+                     apiResponse.setStatusCode(200L);
+                     apiResponse.setMessage("Books found for the author.");
+                 },
+                 () -> {
+                     apiResponse.setStatusCode(404L);
+                     apiResponse.setMessage("No books found for the author.");
+                 }
+         );
+         return apiResponse;
     }
 
     boolean validateAuthorDto(AuthorDto authorDto) {

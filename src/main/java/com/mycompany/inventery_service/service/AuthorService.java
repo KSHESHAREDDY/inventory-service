@@ -7,4 +7,5 @@ import com.mycompany.inventery_service.entity.Author;
 public interface AuthorService {
     ApiResponse searchAuthor(String name);
     ApiResponse addAuthor(AuthorDto authorDto);
+    ApiResponse findBookByAuthor(Long id);
 }
